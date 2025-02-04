@@ -13,7 +13,7 @@ export default function ComingSoon() {
   const soonText = "Soon";
 
   return (
-    <div className="flex-1 bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-800">
+    <div className="flex-1 flex flex-col bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-800">
       <nav className="flex items-center p-6 md:p-8">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -28,8 +28,8 @@ export default function ComingSoon() {
         </motion.div>
       </nav>
 
-      <main className="container mx-auto px-6">
-        <div className="flex flex-col items-center justify-center min-h-[80vh] text-center">
+      <main className="flex-1 container mx-auto px-6 flex items-center">
+        <div className="w-full flex flex-col items-center justify-center text-center">
           <div className="space-y-4">
             <div className="flex justify-center">
               {comingText.split("").map((letter, index) => (
