@@ -25,14 +25,14 @@ export default function AboutGoopss() {
             What We Offer:
             </h2>
             <p>
-            Consider us your store's dedicated partner. We work hands-on, making adjustments to help your store stand out, simplifying digital marketing, and ensuring tech is a breeze. We’re here for ongoing support, making your Etsy journey not just successful but enjoyable too.
+            Consider us your store's dedicated partner. We work hands-on, making adjustments to help your store stand out, simplifying digital marketing, and ensuring tech is a breeze. We're here for ongoing support, making your Etsy journey not just successful but enjoyable too.
             </p>
 
             <h2 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-200 mt-8">
             Our Impact:
             </h2>
             <p>
-            Join the growing community of successful Etsy stores with hundreds of happy customers who have chosen goopss. We’re not just a service; we’re a startup here to help Etsy stores thrive. Join us in making your Etsy store a success!
+            Join the growing community of successful Etsy stores with hundreds of happy customers who have chosen goopss. We're not just a service; we're a startup here to help Etsy stores thrive. Join us in making your Etsy store a success!
             </p>
 
             <h2 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-200 mt-8">
