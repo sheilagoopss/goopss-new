@@ -13,7 +13,7 @@ export default function ComingSoon() {
   const soonText = "Soon";
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-800">
+    <div className="flex-1 bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-800">
       <nav className="flex items-center p-6 md:p-8">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
