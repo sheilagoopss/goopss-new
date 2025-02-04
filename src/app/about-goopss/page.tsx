@@ -41,7 +41,7 @@ export default function AboutGoopss() {
             <p>
             Erez Marchini and Jonathan Prezman, share a similar story. Erez, with his extensive experience in various online stores and recognition as an e-commerce influencer, observed the struggles that talented crafters faced in navigating the basics of online selling. On the other side, Jonathan, with a background in scaling startups and hands-on experience in the tech scene, witnessed the challenges of launching and growing businesses.
 
-            Motivated by these insights, Erez and Jonathan are dedicated to revolutionizing the e-commerce landscape. They take pride in the vibrant community of users, partners, and satisfied customers they’ve built at goopss, all united by the mission to empower Etsy sellers and e-commerce ventures.
+            Motivated by these insights, Erez and Jonathan are dedicated to revolutionizing the e-commerce landscape. They take pride in the vibrant community of users, partners, and satisfied customers they've built at goopss, all united by the mission to empower Etsy sellers and e-commerce ventures.
             </p>
           </div>
         </motion.div>

@@ -131,7 +131,7 @@ Questions about the Terms of Service should be sent to us at hello@goopss.com`
             {Object.entries(content.sections).map(([number, text]) => (
               <section key={number} className="space-y-4">
                 <h2 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-200">
-                  SECTION {number} – {getSectionTitle(parseInt(number))}
+                  SECTION {number} - {getSectionTitle(parseInt(number))}
                 </h2>
                 {text.split('\n\n').map((paragraph, index) => (
                   <p key={index} className="mb-4">
