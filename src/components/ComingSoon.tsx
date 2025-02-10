@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from 'next/image';
 
 export default function ComingSoon() {
   // Animation variants for staggered text animation
@@ -13,22 +14,8 @@ export default function ComingSoon() {
   const soonText = "soon...";
 
   return (
-    <div className="flex-1 flex flex-col bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-800">
-      <nav className="flex items-center p-6 md:p-8">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-zinc-900 to-zinc-600 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent cursor-default">
-            goopss
-          </h1>
-        </motion.div>
-      </nav>
-
-      <main className="flex-1 container mx-auto px-6 flex items-center">
+    <div className="flex-1 flex flex-col">
+      <main className="flex-1 container mx-auto px-6 flex items-center justify-center py-20">
         <div className="w-full flex flex-col items-center justify-center text-center">
           <div className="flex flex-col -space-y-4">
             <motion.h2
