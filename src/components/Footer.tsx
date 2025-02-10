@@ -4,13 +4,11 @@ import { motion } from "framer-motion";
 import React from "react";
 
 interface FooterColumnProps {
-  title: string;
   links: Array<{ label: string; href: string }>;
 }
 
-const FooterColumn: React.FC<FooterColumnProps> = ({ title, links }) => (
+const FooterColumn: React.FC<FooterColumnProps> = ({ links }) => (
   <div className="flex flex-col space-y-4">
-    <h3 className="font-semibold text-zinc-800 dark:text-zinc-200">{title}</h3>
     <ul className="space-y-2">
       {links.map((link) => (
         <li key={link.label}>
@@ -29,18 +27,16 @@ const FooterColumn: React.FC<FooterColumnProps> = ({ title, links }) => (
 export default function Footer(): React.JSX.Element {
   const footerSections = [
     {
-      title: "Support",
       links: [
         { label: "About goopss", href: "/about-goopss" },
         { label: "Contact Us", href: "/contact-us" },
       ],
     },
     {
-      title: "Term",
       links: [
         { label: "Terms and Conditions", href: "/terms-and-conditions" },
         { label: "Privacy Policy", href: "/privacy-policy" },
-        { label: "Fees and Charges", href: "/fees-and-charges" },
+        // { label: "Fees and Charges", href: "/fees-and-charges" },
       ],
     },
     /*
@@ -65,10 +61,9 @@ export default function Footer(): React.JSX.Element {
           transition={{ duration: 0.5 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8"
         >
-          {footerSections.map((section) => (
+          {footerSections.map((section, index) => (
             <FooterColumn
-              key={section.title}
-              title={section.title}
+              key={index}
               links={section.links}
             />
           ))}

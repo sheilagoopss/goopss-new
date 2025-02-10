@@ -10,7 +10,7 @@ export default function ComingSoon() {
   };
 
   const comingText = "Coming";
-  const soonText = "Soon";
+  const soonText = "soon...";
 
   return (
     <div className="flex-1 flex flex-col bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-800">
@@ -30,9 +30,29 @@ export default function ComingSoon() {
 
       <main className="flex-1 container mx-auto px-6 flex items-center">
         <div className="w-full flex flex-col items-center justify-center text-center">
-          <div className="space-y-4">
+          <div className="flex flex-col -space-y-4">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-2xl md:text-3xl leading-none font-bold text-zinc-700 dark:text-zinc-300"
+            >
+              AI To Help <span className="text-[#ffb0ee]">Creators Create</span>
+            </motion.h2>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-7xl md:text-9xl font-bold tracking-[-0.112em] leading-[0.8]"
+            >
+              goopss<span className="text-[#ffb0ee]">.</span>
+            </motion.h2>
+          </div>
+
+          <div className="space-y-4 mt-12">
             <div className="flex justify-center">
-              {comingText.split("").map((letter, index) => (
+              {(comingText + "\u00A0" + soonText).split("").map((letter, index) => (
                 <motion.span
                   key={index}
                   initial="hidden"
@@ -44,26 +64,7 @@ export default function ComingSoon() {
                     type: "spring",
                     stiffness: 100,
                   }}
-                  className="text-6xl md:text-8xl font-bold tracking-tighter"
-                >
-                  {letter}
-                </motion.span>
-              ))}
-            </div>
-            <div className="flex justify-center">
-              {soonText.split("").map((letter, index) => (
-                <motion.span
-                  key={index}
-                  initial="hidden"
-                  animate="visible"
-                  variants={letterVariants}
-                  transition={{
-                    duration: 0.5,
-                    delay: comingText.length * 0.1 + index * 0.1,
-                    type: "spring",
-                    stiffness: 100,
-                  }}
-                  className="text-6xl md:text-8xl font-bold tracking-tighter bg-gradient-to-r from-zinc-900 to-zinc-600 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent"
+                  className="text-2xl md:text-3xl font-bold text-zinc-700 dark:text-zinc-300"
                 >
                   {letter}
                 </motion.span>
