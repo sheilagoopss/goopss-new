@@ -16,10 +16,11 @@ export default function Header() {
           whileTap={{ scale: 0.95 }}
         >
           <Image
-            src="/images/logo-white.svg"
+            src="/images/logo.svg"
             alt="Goopss Logo"
             width={100}
             height={30}
+            className="dark:invert"
           />
         </motion.div>
       </Link>
