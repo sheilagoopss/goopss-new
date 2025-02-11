@@ -3,10 +3,17 @@
 import Script from "next/script";
 import { useEffect } from "react";
 
+declare global {
+  interface Window {
+    Tally?: {
+      loadEmbeds: () => void;
+    };
+  }
+}
+
 export default function Contact() {
   useEffect(() => {
     // Load Tally embeds after component mounts
-    // @ts-ignore (since Tally is loaded via external script)
     window.Tally?.loadEmbeds();
   }, []);
 
