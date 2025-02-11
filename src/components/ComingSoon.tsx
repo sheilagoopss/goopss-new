@@ -21,7 +21,7 @@ export default function ComingSoon() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-2xl md:text-3xl leading-none font-bold text-zinc-700 dark:text-zinc-300"
+              className="text-4xl md:text-6xl leading-none font-bold text-zinc-700 dark:text-zinc-300"
             >
               AI To Help <span className="text-[#ffb0ee]">Creators Create</span>
             </motion.h2>
@@ -30,7 +30,7 @@ export default function ComingSoon() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-7xl md:text-9xl font-bold tracking-[-0.112em] leading-[0.8]"
+              className="text-8xl md:text-[12rem] font-bold tracking-[-0.112em] leading-[0.8]"
             >
               goopss<span className="text-[#ffb0ee]">.</span>
             </motion.h2>
@@ -50,7 +50,7 @@ export default function ComingSoon() {
                     type: "spring",
                     stiffness: 100,
                   }}
-                  className="text-2xl md:text-3xl font-bold text-zinc-700 dark:text-zinc-300"
+                  className="text-4xl md:text-6xl font-bold text-zinc-700 dark:text-zinc-300"
                 >
                   {letter}
                 </motion.span>
