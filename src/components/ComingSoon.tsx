@@ -23,7 +23,7 @@ export default function ComingSoon() {
               transition={{ duration: 0.5 }}
               className="text-4xl md:text-6xl leading-none font-bold text-zinc-700 dark:text-zinc-300"
             >
-              AI To Help <span className="text-[#ffb0ee]">Creators Create</span>
+              AI Marketing Platform <span className="text-[#ffb0ee]">for SMBs</span>
             </motion.h2>
 
             <motion.h2
