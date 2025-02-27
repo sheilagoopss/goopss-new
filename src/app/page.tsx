@@ -1,9 +1,10 @@
-import ComingSoon from "@/components/ComingSoon";
+import Page from "./new/page";
 
 export default function Home() {
   return (
-    <main className="flex-1 flex flex-col">
-      <ComingSoon />
+    <main>
+      {/* <ComingSoon /> */}
+      <Page />
     </main>
   );
 }

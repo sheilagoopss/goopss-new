@@ -37,15 +37,15 @@ As described above, we may use your Personal Information to provide you with tar
 
 Additionally, if you are a European resident we note that we are processing your information in order to fulfill contracts we might have with you (for example if you make an order through the Site), or otherwise to pursue our legitimate business interests listed above. Additionally, please note that your information will be transferred outside of Europe, including to Canada and the United States.`,
       "DATA RETENTION": `When you place an order through the Site, we will maintain your Order Information for our records unless and until you ask us to delete this information.`,
-      "CHANGES": `We may update this privacy policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal or regulatory reasons.`,
+      CHANGES: `We may update this privacy policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal or regulatory reasons.`,
       "CONTACT US": `For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at hello@goopss.com or by mail using the details provided below:
 
-HaPortsim 27, Jerusalem, Israel`
-    }
+HaPortsim 27, Jerusalem, Israel`,
+    },
   };
 
   return (
-    <div className="flex-1 bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-800">
+    <div className="flex-1 bg-none">
       <main className="container mx-auto px-6 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,21 +53,17 @@ HaPortsim 27, Jerusalem, Israel`
           transition={{ duration: 0.5 }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-zinc-900 to-zinc-600 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent">
-            Privacy Policy
-          </h1>
+          <h1 className="text-4xl font-bold mb-8 text-black">Privacy Policy</h1>
 
-          <div className="space-y-8 text-zinc-700 dark:text-zinc-300">
+          <div className="space-y-8 text-black">
             {/* Introduction */}
             <p className="mb-8">{content.introduction}</p>
 
             {/* Sections */}
             {Object.entries(content.sections).map(([title, text]) => (
               <section key={title} className="space-y-4">
-                <h2 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-200">
-                  {title}
-                </h2>
-                {text.split('\n\n').map((paragraph, index) => (
+                <h2 className="text-2xl font-semibold text-black">{title}</h2>
+                {text.split("\n\n").map((paragraph, index) => (
                   <p key={index} className="mb-4">
                     {paragraph}
                   </p>
@@ -81,4 +77,4 @@ HaPortsim 27, Jerusalem, Israel`
   );
 };
 
-export default PrivacyPolicy; 
+export default PrivacyPolicy;

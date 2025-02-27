@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import { League_Spartan } from 'next/font/google'
+import Header from "@/layout/Header";
+import Footer from "@/layout/Footer";
 
 const leagueSpartan = League_Spartan({
   subsets: ['latin'],
@@ -24,9 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${leagueSpartan.className} antialiased min-h-screen flex flex-col bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-800`}>
+      <body className={`${leagueSpartan.className}`}>
         <Header />
-        {children}
+        <div className="min-h-screen">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
