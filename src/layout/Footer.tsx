@@ -7,7 +7,7 @@ import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col">
+    <footer className="flex flex-col w-full bg-[#B5BDFF]">
       <div className="flex flex-row justify-between items-center p-4">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -23,14 +23,14 @@ const Footer = () => {
             height={30}
           />
         </motion.div>
-        <div className="flex flex-row gap-4">
+        <div className="flex md:flex-row flex-col gap-4">
           <Link href="#how-it-works">How it works</Link>
           <Link href="#pricing">Pricing</Link>
           <Link href="/contact-us">Contact Us</Link>
           <Link href="/about-goopss">About</Link>
           <Link href="#blog">Blog</Link>
         </div>
-        <div className="flex flex-row gap-4">
+        <div className="flex md:flex-row flex-col gap-4">
           <FaFacebookF />
           <FaInstagram />
           <FaLinkedin />
@@ -38,13 +38,13 @@ const Footer = () => {
       </div>
       <div className="flex flex-row justify-between items-center p-4 border-t border-gray-200">
         <p>© 2024 Goopss. All rights reserved.</p>
-        <div className="flex flex-row gap-4">
+        <div className="flex md:flex-row flex-col gap-4">
           <Link href="/privacy-policy">Privacy Policy</Link>
           <Link href="/terms-and-conditions">Terms of Service</Link>
           <Link href="#cookies">Cookies Settings</Link>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

@@ -97,12 +97,12 @@ Any ambiguities in the interpretation of these Terms of Service shall not be con
 We reserve the right, at our sole discretion, to update, change or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes.`,
       18: `Goopss Freelancers Ltd. is registered at: HaPortsim 27, Jerusalem, Israel
 
-Questions about the Terms of Service should be sent to us at hello@goopss.com`
-    }
+Questions about the Terms of Service should be sent to us at hello@goopss.com`,
+    },
   };
 
   return (
-    <div className="flex-1 bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-800">
+    <div className="flex-1">
       <main className="container mx-auto px-6 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -110,17 +110,15 @@ Questions about the Terms of Service should be sent to us at hello@goopss.com`
           transition={{ duration: 0.5 }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-zinc-900 to-zinc-600 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold mb-8 text-black">
             Terms and Conditions
           </h1>
 
-          <div className="space-y-8 text-zinc-700 dark:text-zinc-300">
+          <div className="space-y-8 text-black">
             {/* Overview Section */}
             <section className="space-y-4">
-              <h2 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-200">
-                OVERVIEW
-              </h2>
-              {content.overview.split('\n\n').map((paragraph, index) => (
+              <h2 className="text-2xl font-semibold text-black">OVERVIEW</h2>
+              {content.overview.split("\n\n").map((paragraph, index) => (
                 <p key={index} className="mb-4">
                   {paragraph}
                 </p>
@@ -130,10 +128,10 @@ Questions about the Terms of Service should be sent to us at hello@goopss.com`
             {/* Numbered Sections */}
             {Object.entries(content.sections).map(([number, text]) => (
               <section key={number} className="space-y-4">
-                <h2 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-200">
+                <h2 className="text-2xl font-semibold text-black">
                   SECTION {number} - {getSectionTitle(parseInt(number))}
                 </h2>
-                {text.split('\n\n').map((paragraph, index) => (
+                {text.split("\n\n").map((paragraph, index) => (
                   <p key={index} className="mb-4">
                     {paragraph}
                   </p>
@@ -171,4 +169,4 @@ function getSectionTitle(section: number): string {
     18: "CONTACT INFORMATION",
   };
   return titles[section] || "";
-} 
+}

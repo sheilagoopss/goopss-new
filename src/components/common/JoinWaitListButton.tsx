@@ -2,10 +2,18 @@
 
 import { motion } from "framer-motion";
 
+const buttonVariants = {
+  hover: { scale: 1.05 },
+  tap: { scale: 0.95 }
+};
+
 const JoinWaitListButton = () => {
   return (
     <motion.button
-      className="bg-black text-white px-6 py-2 rounded-full"
+      className="bg-black text-white md:px-10 md:py-3 px-5 py-2 rounded-full"
+      whileHover="hover"
+      whileTap="tap"
+      variants={buttonVariants}
       onClick={() => {
         const join = document.getElementById("join");
         if (join) {

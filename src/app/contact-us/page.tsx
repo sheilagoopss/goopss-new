@@ -21,7 +21,7 @@ export default function Contact() {
     <main className="flex-1 container mx-auto px-6 py-12">
       <Script src="https://tally.so/widgets/embed.js" strategy="lazyOnload" />
       <div className="max-w-2xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-zinc-900 to-zinc-600 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent">
+        <h1 className="text-4xl font-bold mb-8 text-center text-black bg-none">
           Contact Us
         </h1>
         <iframe
@@ -37,4 +37,4 @@ export default function Contact() {
       </div>
     </main>
   );
-} 
+}
