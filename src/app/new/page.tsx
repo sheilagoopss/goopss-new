@@ -13,15 +13,16 @@ const Page = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          height: "100vh",
+          minHeight: "100vh",
         }}
+        className="mb-10"
       >
         <div className="flex flex-col items-center justify-center text-center gap-4 md:pt-10 pt-10">
           <div className="flex flex-col gap-4 md:w-1/2 md:px-0 px-8">
             <h1 className="md:text-5xl text-4xl font-bold">
-              Wave Goodbye to Etsy Overwhelm.
+              Wave Goodbye to Etsy
               <br />
-              We Do the Work.
+              Overwhelm – We Do the Work,
               <br />
               You Get the Updates!
             </h1>
@@ -45,8 +46,8 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="md:py-40">
-        <div className="flex flex-col items-center justify-center text-center gap-10 md:pt-20 pt-2 md:gap-20">
+      <div className="md:py-10">
+        <div className="flex flex-col items-center justify-center text-center gap-10 md:pt-10 pt-2 md:gap-20">
           <div className="md:w-1/2">
             <h1 className="text-5xl font-bold">
               Welcome to effortless
@@ -80,7 +81,7 @@ const Page = () => {
           <JoinWaitListButton />
         </div>
       </div>
-      <div className="flex md:flex-row flex-col-reverse md:gap-40 gap-10 justify-center py-10 px-4 md:px-0">
+      <div className="flex md:flex-row flex-col-reverse md:gap-40 gap-10 justify-center py-20 px-4 md:px-0">
         <div>
           <Image
             src="/images/landing/listings.svg"
@@ -116,7 +117,7 @@ const Page = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center text-center gap-10 pt-20 md:px-0 px-4">
+      <div className="flex flex-col items-center justify-center text-center gap-10 py-20 md:px-0 px-4">
         <div>
           <h1 className="text-5xl font-bold">From Basic to Brilliant</h1>
           <p className="text-lg text-gray-500">
@@ -157,7 +158,7 @@ const Page = () => {
         </div>
         <JoinWaitListButton />
       </div>
-      <div className="flex md:flex-row flex-col-reverse gap-20 justify-center py-10 px-4 md:px-0">
+      <div className="flex md:flex-row flex-col-reverse gap-20 justify-center py-20 px-4 md:px-0">
         <div className="flex flex-col gap-2 md:w-1/3">
           <div className="flex flex-col gap-4">
             <h1 className="text-4xl font-bold md:text-left text-center ">
@@ -198,17 +199,15 @@ const Page = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          height: "65vh",
+          minHeight: "60vh",
         }}
-        className="flex flex-col justify-between"
+        className="flex flex-col justify-center mt-10"
       >
-        <div className="flex flex-col items-center justify-center text-center gap-4 pt-64">
+        <div className="flex flex-col items-center justify-center text-center gap-6 pt-32 pb-8">
           <h1 className="text-5xl font-bold">Get on the Waitlist!</h1>
-          <p className="text-gray-500">
+          <p className="text-gray-500 max-w-2xl mx-auto">
             Join the waitlist and be the first to experience hassle-free Etsy
-            <br />
             store management! We handle your SEO, design, and social media while
-            <br />
             you stay effortlessly updated.
           </p>
           <EmailInput />
