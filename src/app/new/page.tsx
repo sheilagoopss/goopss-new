@@ -148,7 +148,7 @@ const Page = () => {
           </div>
           <div className="flex justify-center w-full">
             <Image
-              src="/images/landing/timelyAlert.svg"
+              src="/images/landing/timelyAlert2.svg"
               alt="Before and After"
               width={1000}
               height={1000}
