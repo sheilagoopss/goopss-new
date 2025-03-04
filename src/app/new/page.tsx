@@ -21,11 +21,11 @@ const Page = () => {
           <div className="flex flex-col items-center justify-center text-center gap-4 md:pt-10 pt-10">
             <div className="flex flex-col gap-4 md:w-1/2 md:px-0 px-8">
               <h1 className="md:text-5xl text-4xl font-bold">
-                Wave Goodbye to Etsy
+              Etsy Overwhelm, Solved!
                 <br />
-                Overwhelm – We Do the Work,
+                We Do the Work,
                 <br />
-                You Get the Updates!
+                You Focus on your Craft
               </h1>
               <p className="text-gray-500 text-lg md:mt-0 mt-10">
                 goopss is currently working with a select group of early customers.
@@ -56,26 +56,27 @@ const Page = () => {
               <br /> Etsy management
             </h1>
             <p className="text-gray-500 text-lg">
-              goopss acts like your personal team, automating every task and
-              sending real-time updates so you always know what's been done.
+            goopss takes care of the time-consuming tasks, giving you more time 
+            to focus on creating and selling.
+              
             </p>
           </div>
           <div className="flex md:flex-row flex-col md:gap-20 gap-10">
             <CustomCard
-              title="We Do the Work"
-              description="Automated optimizations, design upgrades, and social posts."
+              title="We Handle the Work"
+              description="Optimizations, pro images, and social content done for you."
               image="/images/landing/weDoTheWork.svg"
               className="bg-pink-200"
             />
             <CustomCard
-              title="Real-Time Updates"
-              description="Notifications via app, email, or SMS."
+              title="Stay in the Loop"
+              description="Get notifications via app, email, or SMS."
               image="/images/landing/realTimeUpdate.svg"
               className="bg-blue-200"
             />
             <CustomCard
-              title="Full Transparency"
-              description="Automated optimizations, design upgrades, and social posts."
+              title="See Every Change"
+              description="See all improvements in one place."
               image="/images/landing/fullTransparency.svg"
               className="bg-lime-200"
             />
@@ -95,27 +96,25 @@ const Page = () => {
           </div>
           <div className="flex flex-col gap-2 md:w-1/2">
             <div className="flex flex-col gap-4 md:mb-10">
-              <h1 className="text-4xl font-bold">Your Listings, Upgraded</h1>
+              <h1 className="text-4xl font-bold">Listing Optimization, Made Easy</h1>
               <p className="text-lg text-gray-500 text-center md:text-left">
-                Our AI transforms your listings into SEO powerhouses. We optimize
-                titles, tags, and descriptions—and notify you with
-                before-and-after snapshots.
+              Our AI fine-tunes your listings for maximum impact. We optimize titles, tags, and descriptions to boost visibility and show you the results with before-and-after snapshots.
               </p>
             </div>
 
             <ListItem
-              title="Smart Analysis"
-              description="In-depth review of your product details"
+              title="Stronger Listings, More Sales"
+              description="Optimized listings that convert more shoppers"
               className="hover:bg-violet-200 border border-violet-200"
             />
             <ListItem
-              title="Precision Keywords"
-              description="Boost your visibility with targeted keywords"
+              title="SEO-Boosted Keywords"
+              description="Reach more buyers with strategically chosen keywords"
               className="hover:bg-violet-200 border border-violet-200"
             />
             <ListItem
-              title="Instant Updates"
-              description="Friendly alerts when improvements go live"
+              title="Optimized & Ready"
+              description="Your listings stay updated for peak performance"
               className="hover:bg-violet-200 border border-violet-200"
             />
           </div>
@@ -124,12 +123,11 @@ const Page = () => {
       <div className="container mx-auto px-4 md:px-0">
         <div className="flex flex-col items-center text-center gap-10 py-20">
           <div>
-            <h1 className="text-5xl font-bold">From Basic to Brilliant</h1>
+            <h1 className="text-5xl font-bold">From Basic to Studio-Quality Images</h1>
             <p className="text-lg text-gray-500">
-              We take your everyday photos and turn them into
+            We turn simple product photos into polished, professional images 
               <br />
-              studio-quality images that capture your brand's story—while keeping
-              you updated
+              that showcase your brand at its best.
             </p>
           </div>
           <div className="w-full flex flex-col md:gap-10 gap-5">
