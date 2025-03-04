@@ -35,7 +35,7 @@ This site may contain certain historical information. Historical information, ne
 We reserve the right at any time to modify or discontinue the Service (or any part or content thereof) without notice at any time.
 
 We shall not be liable to you or to any third-party for any modification, price change, suspension or discontinuance of the Service.`,
-      5: `At Goopss, we strive to deliver top-notch subscription products that cater to our clients' needs and expectations.
+      5: `At goopss, we strive to deliver top-notch subscription products that cater to our clients' needs and expectations.
 
 We understand that circumstances may arise where you feel our subscription service doesn't meet your requirements. With this in mind, we have established a clear refund policy.
 

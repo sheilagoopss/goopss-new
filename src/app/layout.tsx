@@ -10,8 +10,8 @@ const leagueSpartan = League_Spartan({
 })
 
 export const metadata: Metadata = {
-  title: "Goopss",
-  description: "Goopss",
+  title: "goopss",
+  description: "goopss",
   icons: {
     icon: '/images/favicon.ico',
   },

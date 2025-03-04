@@ -18,17 +18,17 @@ const Footer = () => {
         >
           <Image
             src="/images/logo.svg"
-            alt="Goopss Logo"
+            alt="goopss Logo"
             width={100}
             height={30}
           />
         </motion.div>
         <div className="flex md:flex-row flex-col gap-4">
-          <Link href="#how-it-works">How it works</Link>
-          <Link href="#pricing">Pricing</Link>
-          <Link href="/contact-us">Contact Us</Link>
-          <Link href="/about-goopss">About</Link>
-          <Link href="#blog">Blog</Link>
+          {/* <Link href="#how-it-works">How it works</Link>
+          <Link href="#pricing">Pricing</Link> */}
+          {/* <Link href="/contact-us">Contact Us</Link> */}
+          {/* <Link href="/about-goopss">About</Link>
+          <Link href="#blog">Blog</Link> */}  
         </div>
         <div className="flex md:flex-row flex-col gap-4">
           {/* <Link 
@@ -58,11 +58,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex flex-row justify-between items-center p-4 border-t border-gray-200">
-        <p>© 2025 Goopss. All rights reserved.</p>
+        <p>© 2025 goopss. All rights reserved.</p>
         <div className="flex md:flex-row flex-col gap-4">
           <Link href="/privacy-policy">Privacy Policy</Link>
           <Link href="/terms-and-conditions">Terms of Service</Link>
-          <Link href="#cookies">Cookies Settings</Link>
+          <Link href="/contact-us">Contact Us</Link>
         </div>
       </div>
     </footer>
