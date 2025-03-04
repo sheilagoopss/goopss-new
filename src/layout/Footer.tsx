@@ -31,7 +31,7 @@ const Footer = () => {
           <Link href="#blog">Blog</Link>
         </div>
         <div className="flex md:flex-row flex-col gap-4">
-          <Link 
+          {/* <Link 
             href="https://www.facebook.com/goopss.fast.freelancing/" 
             target="_blank"
             rel="noopener noreferrer"
@@ -46,7 +46,7 @@ const Footer = () => {
             className="hover:text-pink-600 transition-colors"
           >
             <FaInstagram />
-          </Link>
+          </Link> */}
           <Link 
             href="https://il.linkedin.com/company/goopss?trk=public_post_feed-actor-name" 
             target="_blank"

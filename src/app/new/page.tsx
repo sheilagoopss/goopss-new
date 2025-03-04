@@ -27,9 +27,9 @@ const Page = () => {
               You Get the Updates!
             </h1>
             <p className="text-gray-500 text-lg md:mt-0 mt-10">
-              Imagine every detail of your Etsy store—SEO tweaks, design magic,
-              and social posts—handled for you, with friendly updates keeping
-              you in the loop.
+              goopss is currently working with a select group of early customers.
+              <br />
+              Fill your details if you're interested in becoming one.
             </p>
           </div>
           <JoinWaitListButton />
