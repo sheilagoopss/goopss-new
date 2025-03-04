@@ -17,7 +17,7 @@ export default function Header() {
         >
           <Image
             src="/images/logo.svg"
-            alt="Goopss Logo"
+            alt="goopss Logo"
             width={100}
             height={30}
             className="dark:invert"

@@ -12,11 +12,11 @@ export default function AboutGoopss() {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto"
         >
-          <h1 className="text-4xl font-bold mb-8 text-black">About Goopss</h1>
+          <h1 className="text-4xl font-bold mb-8 text-black">About goopss</h1>
 
           <div className="space-y-6 text-black">
             <p>
-              Goopss, an Israeli startup, was born from a simple idea: Etsy
+              goopss was born from a simple idea: Etsy
               sellers are incredibly talented but sometimes need extra help. As
               entrepreneurs with years of experience in e-commerce platforms,
               especially Etsy, our mission is to be hands-on, taking care of
@@ -34,7 +34,7 @@ export default function AboutGoopss() {
               enjoyable too.
             </p>
 
-            <h2 className="text-2xl font-semibold text-black mt-8">
+            {/* <h2 className="text-2xl font-semibold text-black mt-8">
               Our Impact:
             </h2>
             <p>
@@ -60,7 +60,7 @@ export default function AboutGoopss() {
               users, partners, and satisfied customers they've built at goopss,
               all united by the mission to empower Etsy sellers and e-commerce
               ventures.
-            </p>
+            </p> */}
           </div>
         </motion.div>
       </main>
