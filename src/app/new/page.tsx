@@ -25,7 +25,7 @@ const Page = () => {
                 <br />
                 We Do the Work,
                 <br />
-                You Focus on your Craft
+                You Focus on Your Craft
               </h1>
               <p className="text-gray-500 text-lg md:mt-0 mt-10">
                 goopss is currently working with a select group of early customers.
@@ -52,8 +52,8 @@ const Page = () => {
         <div className="flex flex-col items-center justify-center text-center gap-10 md:pt-10 pt-2 md:gap-20">
           <div className="md:w-1/2">
             <h1 className="text-5xl font-bold">
-              Welcome to effortless
-              <br /> Etsy management
+              Welcome to Effortless
+              <br /> Etsy Management
             </h1>
             <p className="text-gray-500 text-lg">
             goopss takes care of the time-consuming tasks, giving you more time 
@@ -64,7 +64,7 @@ const Page = () => {
           <div className="flex md:flex-row flex-col md:gap-20 gap-10">
             <CustomCard
               title="We Handle the Work"
-              description="Optimizations, pro images, and social content done for you."
+              description="Optimizations, images, social posts, ad recos done for you."
               image="/images/landing/weDoTheWork.svg"
               className="bg-pink-200"
             />
@@ -76,7 +76,7 @@ const Page = () => {
             />
             <CustomCard
               title="See Every Change"
-              description="See all improvements in one place."
+              description="Easily track every improvement in one place."
               image="/images/landing/fullTransparency.svg"
               className="bg-lime-200"
             />
@@ -85,13 +85,14 @@ const Page = () => {
         </div>
       </div>
       <div className="container mx-auto px-4 md:px-0">
-        <div className="flex md:flex-row flex-col-reverse gap-10 items-center py-20">
+        <div className="flex md:flex-row flex-col-reverse md:gap-20 gap-10 items-center py-20">
           <div className="md:w-1/2">
             <Image
               src="/images/landing/listings.svg"
               alt="Listings"
               width={500}
               height={500}
+              className="w-full"
             />
           </div>
           <div className="flex flex-col gap-2 md:w-1/2">
@@ -131,27 +132,29 @@ const Page = () => {
             </p>
           </div>
           <div className="w-full flex flex-col md:gap-10 gap-5">
-            <div className="flex md:flex-row flex-col md:gap-10 gap-5 justify-between">
-              <div className="md:w-1/2">
+            <div className="flex md:flex-row flex-col md:gap-4 gap-5">
+              <div className="md:w-1/2 flex justify-end">
                 <Image
-                  src="/images/landing/ExpertEnhancement.svg"
+                  src="/images/landing/HighImpactImages.svg"
                   alt="Basic"
                   width={500}
                   height={500}
+                  className="w-full"
                 />
               </div>
-              <div className="md:w-1/2">
+              <div className="md:w-1/2 flex justify-start">
                 <Image
-                  src="/images/landing/visualStoryTelling.svg"
+                  src="/images/landing/BrandBoostingVisual.svg"
                   alt="Basic"
                   width={500}
                   height={500}
+                  className="w-full"
                 />
               </div>
             </div>
             <div className="w-full">
               <Image
-                src="/images/landing/timelyAlert2.svg"
+                src="/images/landing/TimelyAlerts.svg"
                 alt="Before and After"
                 width={1000}
                 height={1000}
@@ -163,31 +166,31 @@ const Page = () => {
         </div>
       </div>
       <div className="container mx-auto px-4 md:px-0">
-        <div className="flex md:flex-row flex-col-reverse gap-10 items-center py-20">
+        <div className="flex md:flex-row flex-col-reverse md:gap-20 gap-10 items-center py-20">
           <div className="md:w-1/2 flex flex-col gap-2">
             <div className="flex flex-col gap-4">
               <h1 className="text-4xl font-bold md:text-left text-center">
                 Amplify Your Online Presence
               </h1>
               <p className="text-lg text-gray-500 md:text-left text-center">
-                We manage your social media by curating content, crafting engaging
-                posts, and publishing them at peak times—complete with live
-                performance updates
+              Our AI-powered system manages your Facebook Page, Instagram, 
+              Facebook Groups, and Pinterest by crafting engaging posts 
+              and publishing them at the best times.
               </p>
             </div>
             <ListItem
-              title="Curated Strategy"
-              description="Targeting the best groups, hashtags, and boards. "
+              title="Smart Targeting"
+              description="Reach the right audience with the best groups, hashtags, and boards"
               className="hover:bg-lime-200 border border-lime-200"
             />
             <ListItem
               title="Engaging Posts"
-              description="Authentic content that resonates with your audience"
+              description="Authentic posts that connect with your audience and drive interaction"
               className="hover:bg-lime-200 border border-lime-200"
             />
             <ListItem
-              title="Live Notifications"
-              description="Real-time insights delivered as soon as posts go live."
+              title="Consistent Posting"
+              description="Stay active with a steady flow of scheduled posts"
               className="hover:bg-lime-200 border border-lime-200"
             />
           </div>
@@ -197,6 +200,47 @@ const Page = () => {
               alt="Before and After"
               width={500}
               height={500}
+              className="w-full"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="container mx-auto px-4 md:px-0">
+        <div className="flex md:flex-row flex-col-reverse md:gap-20 gap-10 items-center py-20">
+          <div className="md:w-1/2">
+            <Image
+              src="/images/landing/AdsRecommendation.svg"
+              alt="Listings"
+              width={500}
+              height={500}
+              className="w-full"
+            />
+          </div>
+          <div className="flex flex-col gap-2 md:w-1/2">
+            <div className="flex flex-col gap-4 md:mb-10">
+              <h1 className="text-4xl font-bold">Maximize Your Ad Success</h1>
+              <p className="text-lg text-gray-500 text-center md:text-left">
+              Running ads can be overwhelming, but we make it easy. 
+              By using our Chrome extension, we analyze your store stats 
+              and find the best listings to promote. Get data-backed recommendations 
+              to optimize your ad spend and boost sales.  
+              </p>
+            </div>
+
+            <ListItem
+              title="Smart Product Selection"
+              description="We recommend the listings with the highest potential for ad success"
+              className="hover:bg-pink-200 border border-pink-200"
+            />
+            <ListItem
+              title="Data-Driven Decisions"
+              description="Use real store insights to make the most of your budget"
+              className="hover:bg-pink-200 border border-pink-200"
+            />
+            <ListItem
+              title="Effortless Optimization"
+              description="No more guesswork, just clear and strategic ad recommendations"
+              className="hover:bg-pink-200 border border-pink-200"
             />
           </div>
         </div>
