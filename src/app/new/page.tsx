@@ -23,7 +23,7 @@ const Page = () => {
               <h1 className="md:text-5xl text-4xl font-bold">
               Etsy Success Without the Stress
                 <br />
-                We Do the Work,
+                Your AI Agent Handles the Work,
                 <br />
                 You Focus on Your Craft
               </h1>
