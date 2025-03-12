@@ -21,7 +21,7 @@ const Page = () => {
           <div className="flex flex-col items-center justify-center text-center gap-4 md:pt-10 pt-10">
             <div className="flex flex-col gap-4 md:w-3/4 md:px-0 px-8">
               <h1 className="md:text-5xl text-4xl font-bold">
-              Etsy Success, Stress-Free
+              Etsy Success, Stress-Free.
                 <br />
                 Let Your AI Agent Do the Work 
                 <br />
