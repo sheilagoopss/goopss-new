@@ -21,16 +21,16 @@ const Page = () => {
           <div className="flex flex-col items-center justify-center text-center gap-4 md:pt-10 pt-10">
             <div className="flex flex-col gap-4 md:w-1/2 md:px-0 px-8">
               <h1 className="md:text-5xl text-4xl font-bold">
-              Etsy Overwhelm, Solved!
+              Etsy Success Without the Stress
                 <br />
                 We Do the Work,
                 <br />
                 You Focus on Your Craft
               </h1>
               <p className="text-gray-500 text-lg md:mt-0 mt-10">
-                goopss is currently working with a select group of early customers.
+              goopss is working with a select group of users.
                 <br />
-                Fill your details if you're interested in becoming one.
+                Fill in your details to become an early customer.
               </p>
             </div>
             <JoinWaitListButton />
