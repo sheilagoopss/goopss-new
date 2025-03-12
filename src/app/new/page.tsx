@@ -19,7 +19,7 @@ const Page = () => {
       >
         <div className="container mx-auto px-4 md:px-0">
           <div className="flex flex-col items-center justify-center text-center gap-4 md:pt-10 pt-10">
-            <div className="flex flex-col gap-4 md:w-1/2 md:px-0 px-8">
+            <div className="flex flex-col gap-4 md:w-3/4 md:px-0 px-8">
               <h1 className="md:text-5xl text-4xl font-bold">
               Etsy Success Without the Stress
                 <br />
@@ -37,7 +37,7 @@ const Page = () => {
             <div className="rounded-2xl overflow-hidden md:w-[100ch] md:mt-10 mt-24">
               <Image
                 loading="lazy"
-                src="/images/landing/heroImage.png"
+                src="/images/landing/Tasks.svg"
                 alt="Hero Background"
                 quality={100}
                 width={1000}
@@ -63,7 +63,7 @@ const Page = () => {
           </div>
           <div className="flex md:flex-row flex-col md:gap-20 gap-10">
             <CustomCard
-              title="We Handle the Work"
+              title="Our AI Does the Work"
               description="Optimizations, images, social posts, ad recos done for you."
               image="/images/landing/weDoTheWork.svg"
               className="bg-pink-200"
@@ -99,7 +99,8 @@ const Page = () => {
             <div className="flex flex-col gap-4 md:mb-10">
               <h1 className="text-4xl font-bold">Listing Optimization, Made Easy</h1>
               <p className="text-lg text-gray-500 text-center md:text-left">
-              Our AI fine-tunes your listings for maximum impact. We optimize titles, tags, and descriptions to boost visibility and show you the results with before-and-after snapshots.
+              Our AI fine-tunes your listings for maximum impact, optimizing titles, tags, and descriptions 
+              to boost visibility. Before-and-after snapshots highlight the results.
               </p>
             </div>
 
@@ -126,7 +127,7 @@ const Page = () => {
           <div>
             <h1 className="text-5xl font-bold">From Basic to Studio-Quality Images</h1>
             <p className="text-lg text-gray-500">
-            We turn simple product photos into polished, professional images 
+          Turn simple product photos into polished, professional images 
               <br />
               that showcase your brand at its best.
             </p>
@@ -220,16 +221,16 @@ const Page = () => {
             <div className="flex flex-col gap-4 md:mb-10">
               <h1 className="text-4xl font-bold">Maximize Your Ad Success</h1>
               <p className="text-lg text-gray-500 text-center md:text-left">
-              Running ads can be overwhelming, but we make it easy. 
-              By using our Chrome extension, we analyze your store stats 
-              and find the best listings to promote. Get data-backed recommendations 
+              Running ads can be overwhelming, but the process is made easy. 
+              Our Chrome extension analyzes your store stats to pinpoint the best listings for promotion.
+              Get data-backed recommendations 
               to optimize your ad spend and boost sales.  
               </p>
             </div>
 
             <ListItem
               title="Smart Product Selection"
-              description="We recommend the listings with the highest potential for ad success"
+              description="Your highest-potential listings are recommended for better ad performance"
               className="hover:bg-pink-200 border border-pink-200"
             />
             <ListItem
@@ -259,8 +260,7 @@ const Page = () => {
           <h1 className="text-5xl font-bold">Get on the Waitlist!</h1>
           <p className="text-gray-500 max-w-2xl mx-auto">
             Join the waitlist and be the first to experience hassle-free Etsy
-            store management! We handle your SEO, design, and social media while
-            you stay effortlessly updated.
+            store management! Our AI handles it all while you focus on what matters.
           </p>
           <EmailInput />
         </div>
