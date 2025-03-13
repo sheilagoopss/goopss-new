@@ -3,6 +3,7 @@ import JoinWaitListButton from "@/components/common/JoinWaitListButton";
 import CustomCard from "@/components/landing/CustomCard";
 import ListItem from "@/components/landing/ListItem";
 import Image from "next/image";
+import BeforeAfterSlider from "@/components/landing/BeforeAfterSlider";
 
 const Page = () => {
   return (
@@ -133,24 +134,46 @@ const Page = () => {
             </p>
           </div>
           <div className="w-full flex flex-col md:gap-10 gap-5">
-            <div className="flex md:flex-row flex-col md:gap-4 gap-5">
-              <div className="md:w-1/2 flex justify-end">
-                <Image
-                  src="/images/landing/HighImpactImages.svg"
-                  alt="Basic"
-                  width={500}
-                  height={500}
-                  className="w-full"
+            <div className="w-full grid md:grid-cols-2 grid-cols-1 md:gap-8 gap-5">
+              <div className="relative overflow-hidden rounded-3xl">
+                <BeforeAfterSlider
+                  beforeImage="/images/landing/Before1.jpg"
+                  afterImage="/images/landing/After1.jpg"
+                  title="Expert Enhancement"
+                  subtitle="See how we transform basic product photos"
+                  beforeLabel="Before"
+                  afterLabel="After"
+                  className="bg-[#FFE0F0]"
                 />
+                <div className="absolute top-0 right-0 w-24 h-24 pointer-events-none">
+                  <Image
+                    src="/images/landing/Star5.svg"
+                    alt="Star 5"
+                    width={96}
+                    height={96}
+                    className="object-contain"
+                  />
+                </div>
               </div>
-              <div className="md:w-1/2 flex justify-start">
-                <Image
-                  src="/images/landing/BrandBoostingVisual.svg"
-                  alt="Basic"
-                  width={500}
-                  height={500}
-                  className="w-full"
+              <div className="relative overflow-hidden rounded-3xl">
+                <BeforeAfterSlider
+                  beforeImage="/images/landing/Before2.jpg"
+                  afterImage="/images/landing/After2.jpg"
+                  title="Visual Storytelling"
+                  subtitle="Professional editing that sells your products"
+                  beforeLabel="Before"
+                  afterLabel="After"
+                  className="bg-[#E5E7FB]"
                 />
+                <div className="absolute top-0 right-0 w-24 h-24 pointer-events-none">
+                  <Image
+                    src="/images/landing/Star6.svg"
+                    alt="Star 6"
+                    width={96}
+                    height={96}
+                    className="object-contain"
+                  />
+                </div>
               </div>
             </div>
             <div className="w-full">
