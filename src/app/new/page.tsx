@@ -140,7 +140,7 @@ const Page = () => {
                   beforeImage="/images/landing/Before1.jpg"
                   afterImage="/images/landing/After1.jpg"
                   title="Expert Enhancement"
-                  subtitle="See how we transform basic product photos"
+                  subtitle="See how we turn ordinary product photos into high-end images"
                   beforeLabel="Before"
                   afterLabel="After"
                   className="bg-[#FFE0F0]"
@@ -159,8 +159,8 @@ const Page = () => {
                 <BeforeAfterSlider
                   beforeImage="/images/landing/Before2.jpg"
                   afterImage="/images/landing/After2.jpg"
-                  title="Visual Storytelling"
-                  subtitle="Professional editing that sells your products"
+                  title="Visual Perfection"
+                  subtitle="Professional editing that gives your products a polished look."
                   beforeLabel="Before"
                   afterLabel="After"
                   className="bg-[#E5E7FB]"
@@ -176,7 +176,7 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full">
+            {/* <div className="w-full">
               <Image
                 src="/images/landing/TimelyAlerts.svg"
                 alt="Before and After"
@@ -184,7 +184,7 @@ const Page = () => {
                 height={1000}
                 className="hidden md:block object-cover w-full"
               />
-            </div>
+            </div> */}
           </div>
           <JoinWaitListButton />
         </div>
