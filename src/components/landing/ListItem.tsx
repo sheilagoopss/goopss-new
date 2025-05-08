@@ -29,8 +29,8 @@ const ListItem = ({ title, description, className }: ListItemProps) => {
         className={`flex flex-col px-10 py-4 rounded-full ${className}`}
         variants={listItemVariants}
       >
-        <h3 className="text-2xl font-bold">{title}</h3>
-        <p className="text-sm text-gray-500">{description}</p>
+        <h3 className="text-2xl font-bold text-right rtl:text-right">{title}</h3>
+        <p className="text-sm text-gray-500 text-right rtl:text-right">{description}</p>
       </motion.div>
     </motion.div>
   );

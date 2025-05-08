@@ -4,8 +4,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname();
+  const isHebrew = pathname === "/il";
+
   return (
     <footer className="flex flex-col w-full bg-[#B5BDFF]">
       <div className="flex flex-row justify-between items-center p-4">
@@ -60,9 +64,9 @@ const Footer = () => {
       <div className="flex flex-row justify-between items-center p-4 border-t border-gray-200">
         <p>© 2025 goopss. All rights reserved.</p>
         <div className="flex md:flex-row flex-col gap-4">
-          <Link href="/privacy-policy">Privacy Policy</Link>
-          <Link href="/terms-and-conditions">Terms of Service</Link>
-          <Link href="/contact-us">Contact Us</Link>
+          <Link href="/privacy-policy">{isHebrew ? "מדיניות פרטיות" : "Privacy Policy"}</Link>
+          <Link href="/terms-and-conditions">{isHebrew ? "תנאי שימוש" : "Terms of Service"}</Link>
+          <Link href="/contact-us">{isHebrew ? "צור קשר" : "Contact Us"}</Link>
         </div>
       </div>
     </footer>

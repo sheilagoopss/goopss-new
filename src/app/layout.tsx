@@ -10,8 +10,8 @@ const leagueSpartan = League_Spartan({
 })
 
 export const metadata: Metadata = {
-  title: "goopss",
-  description: "goopss",
+  title: "goopss - Etsy Success, Stress-Free",
+  description: "Let Your AI Agent Do the Work While You Focus on Your Craft",
   icons: {
     icon: '/images/favicon.ico',
   },

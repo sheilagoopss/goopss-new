@@ -3,8 +3,19 @@
 import { useState } from "react";
 import useWaitList from "@/hooks/useWaitlist";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
-const EmailInput = () => {
+interface EmailInputProps {
+  buttonText?: string;
+  placeholderText?: string;
+  savingText?: string;
+}
+
+const EmailInput = ({ 
+  buttonText = "Join Waitlist",
+  placeholderText = "Enter your email",
+  savingText = "Saving..."
+}: EmailInputProps) => {
   const [email, setEmail] = useState("");
   const [feedbackMessage, setFeedbackMessage] = useState("");
   const { saveEmail, isSavingEmail } = useWaitList();
@@ -44,7 +55,7 @@ const EmailInput = () => {
       <div className="flex flex-row gap-2 border border-gray-300 rounded-2xl p-1">
         <motion.input
           type="email"
-          placeholder="Enter your email"
+          placeholder={placeholderText}
           className="outline-none rounded-md px-4 py-2 md:w-96"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -59,7 +70,7 @@ const EmailInput = () => {
           whileTap="tap"
           variants={buttonVariants}
         >
-          {isSavingEmail ? "Saving..." : "Join Waitlist"}
+          {isSavingEmail ? savingText : buttonText}
         </motion.button>
       </div>
       {feedbackMessage && (
