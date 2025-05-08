@@ -7,7 +7,11 @@ const buttonVariants = {
   tap: { scale: 0.95 }
 };
 
-const JoinWaitListButton = () => {
+interface JoinWaitListButtonProps {
+  text?: string;
+}
+
+const JoinWaitListButton = ({ text = "Join Waitlist" }: JoinWaitListButtonProps) => {
   return (
     <motion.button
       className="bg-black text-white md:px-10 md:py-3 px-5 py-2 rounded-full"
@@ -21,7 +25,7 @@ const JoinWaitListButton = () => {
         }
       }}
     >
-      Join Waitlist
+      {text}
     </motion.button>
   );
 };
