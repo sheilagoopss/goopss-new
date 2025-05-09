@@ -7,6 +7,7 @@ import MultiSlideSlider from "@/components/landing/MultiSlideSlider";
 import { Open_Sans } from "next/font/google";
 import FloatingWhatsApp from "@/components/common/FloatingWhatsApp"
 import MaintenancePackage from "@/components/landing/MaintenancePackage"
+import ContactForm from "@/components/landing/ContactForm"
 
 const openSansHebrew = Open_Sans({
   subsets: ["hebrew"],
@@ -296,6 +297,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <ContactForm />
       <MaintenancePackage />
       <div
         style={{
