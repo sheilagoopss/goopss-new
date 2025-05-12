@@ -1,43 +1,91 @@
-"use client"
+"use client";
 
-import { Open_Sans } from "next/font/google"
-import { FormEvent } from "react"
+import { useMailSender } from "@/hooks/useSendMail";
+import { Open_Sans } from "next/font/google";
+import { FormEvent } from "react";
 
 const openSansHebrew = Open_Sans({
   subsets: ["hebrew"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-open-sans-hebrew",
-})
+});
 
 export default function ContactForm() {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    // Form handling will be added here later
-    console.log("Form submitted")
-  }
+  const { sendMail, isSendingMail } = useMailSender();
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const values = Object.fromEntries(
+      new FormData(e.target as HTMLFormElement),
+    );
+    const response = await sendMail({
+      to: [process.env.NEXT_PUBLIC_CONTACT_EMAIL || ""],
+      subject: "New Contact Form Submission",
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #f9f9f9;">
+          <h2 style="color: #333; text-align: center; border-bottom: 2px solid #B5BDFF; padding-bottom: 10px;">New Contact Form Submission</h2>
+          <p style="color: #666;">Hello,</p>
+          <p style="color: #666;">You have received a new contact form submission from goopss.com. Here are the details:</p>
+          <div style="background-color: white; padding: 15px; border-radius: 6px; margin: 15px 0; border-left: 4px solid #B5BDFF;">
+            <p style="margin: 8px 0;"><strong>Name:</strong> ${values.name}</p>
+            <p style="margin: 8px 0;"><strong>Email:</strong> ${values.email}</p>
+            <p style="margin: 8px 0;"><strong>Phone:</strong> ${values.phone}</p>
+            <p style="margin: 8px 0;"><strong>Message:</strong></p>
+            <p style="background-color: #f0f0f0; padding: 10px; border-radius: 4px;">${values.message}</p>
+          </div>
+          <p style="color: #666;">Please respond to this inquiry at your earliest convenience.</p>
+          <p style="color: #666;">Best regards,<br>Goopss Notification System</p>
+          <div style="text-align: center; margin-top: 20px; font-size: 12px; color: #999; border-top: 1px solid #e0e0e0; padding-top: 10px;">
+            This is an automated email. Please do not reply directly to this message.
+          </div>
+        </div>
+      `,
+    });
+    if (response?.data) {
+      (e.target as HTMLFormElement).reset();
+    }
+  };
 
   return (
-    <section className={`w-full py-16 md:py-24 ${openSansHebrew.variable} font-sans`} dir="rtl">
+    <section
+      className={`w-full py-16 md:py-24 ${openSansHebrew.variable} font-sans`}
+      dir="rtl"
+    >
       <div className="container mx-auto px-4 md:px-0">
         <div className="flex flex-col items-center text-center mb-12">
-          <h2 className="text-5xl font-bold tracking-tight mb-2">מעוניינים? השאירו פרטים</h2>
+          <h2 className="text-5xl font-bold tracking-tight mb-2">
+            מעוניינים? השאירו פרטים
+          </h2>
           <p className="text-gray-500 text-xl max-w-[700px]">
             נשמח ליצור איתכם קשר ולהתאים את הפתרון המושלם עבורכם
           </p>
         </div>
 
         <div className="w-full max-w-[1000px] mx-auto">
-          <div className="relative rounded-3xl p-0 md:p-0 overflow-hidden w-full" style={{background: '#EBF1FB'}}>
+          <div
+            className="relative rounded-3xl p-0 md:p-0 overflow-hidden w-full"
+            style={{ background: "#EBF1FB" }}
+          >
             {/* Blob SVG */}
-            <svg className="absolute -top-10 -left-10 w-60 h-60 opacity-40" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <path fill="#B4BDFF" d="M44.8,-67.2C56.6,-59.7,63.7,-44.2,68.2,-29.2C72.7,-14.2,74.6,0.3,70.2,13.2C65.8,26.1,55.1,37.4,43.1,46.7C31.1,56,17.8,63.3,3.2,62.1C-11.4,60.9,-22.8,51.2,-34.2,42.2C-45.6,33.2,-57,24.9,-62.7,13.1C-68.4,1.3,-68.4,-13.9,-62.2,-26.2C-56,-38.5,-43.6,-48,-30.2,-54.7C-16.8,-61.4,-2.4,-65.3,12.2,-69.1C26.8,-72.9,41.6,-76.7,44.8,-67.2Z" transform="translate(100 100)" />
+            <svg
+              className="absolute -top-10 -left-10 w-60 h-60 opacity-40"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="#B4BDFF"
+                d="M44.8,-67.2C56.6,-59.7,63.7,-44.2,68.2,-29.2C72.7,-14.2,74.6,0.3,70.2,13.2C65.8,26.1,55.1,37.4,43.1,46.7C31.1,56,17.8,63.3,3.2,62.1C-11.4,60.9,-22.8,51.2,-34.2,42.2C-45.6,33.2,-57,24.9,-62.7,13.1C-68.4,1.3,-68.4,-13.9,-62.2,-26.2C-56,-38.5,-43.6,-48,-30.2,-54.7C-16.8,-61.4,-2.4,-65.3,12.2,-69.1C26.8,-72.9,41.6,-76.7,44.8,-67.2Z"
+                transform="translate(100 100)"
+              />
             </svg>
             {/* White Content Box */}
             <div className="relative bg-white rounded-2xl shadow-lg p-14 md:p-20 m-10">
               <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="text-lg font-medium">שם מלא <span className="text-red-500">*</span></label>
+                    <label htmlFor="name" className="text-lg font-medium">
+                      שם מלא <span className="text-red-500">*</span>
+                    </label>
                     <input
                       type="text"
                       id="name"
@@ -48,7 +96,9 @@ export default function ContactForm() {
                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="email" className="text-lg font-medium">אימייל <span className="text-red-500">*</span></label>
+                    <label htmlFor="email" className="text-lg font-medium">
+                      אימייל <span className="text-red-500">*</span>
+                    </label>
                     <input
                       type="email"
                       id="email"
@@ -59,7 +109,9 @@ export default function ContactForm() {
                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="phone" className="text-lg font-medium">טלפון <span className="text-red-500">*</span></label>
+                    <label htmlFor="phone" className="text-lg font-medium">
+                      טלפון <span className="text-red-500">*</span>
+                    </label>
                     <input
                       type="tel"
                       id="phone"
@@ -71,7 +123,9 @@ export default function ContactForm() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="message" className="text-lg font-medium">הודעה <span className="text-red-500">*</span></label>
+                  <label htmlFor="message" className="text-lg font-medium">
+                    הודעה <span className="text-red-500">*</span>
+                  </label>
                   <textarea
                     id="message"
                     name="message"
@@ -84,8 +138,9 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   className="bg-[#B4BDFF] text-white rounded-lg py-3 px-6 text-lg font-medium hover:bg-[#9BA4E6] transition-colors"
+                  disabled={isSendingMail}
                 >
-                  שלח הודעה
+                  {isSendingMail ? "שומר..." : "שלח הודעה"}
                 </button>
               </form>
             </div>
@@ -93,5 +148,5 @@ export default function ContactForm() {
         </div>
       </div>
     </section>
-  )
-} 
+  );
+}
