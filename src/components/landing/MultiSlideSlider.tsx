@@ -7,8 +7,8 @@ import Image from "next/image"
 interface Slide {
   beforeImage: string
   afterImage: string
-  title: string
-  subtitle: string
+  title?: string
+  subtitle?: string
 }
 
 interface MultiSlideSliderProps {
@@ -80,11 +80,24 @@ function MultiSlideSlider({
   }, [isDragging])
 
   return (
-    <div className={`w-full max-w-6xl mx-auto rounded-3xl overflow-hidden p-6 ${className} relative`}>
-      <div className="mb-4 px-4 pb-4">
-        <h2 className="text-4xl font-bold text-gray-900 py-4">{slides[currentSlide].title}</h2>
-        <p className="text-sm text-gray-500 pb-4">{slides[currentSlide].subtitle}</p>
-      </div>
+    <div className={`w-full max-w-6xl mx-auto rounded-3xl p-12 ${className} relative`}>
+      {/* Navigation Buttons */}
+      <button
+        onClick={prevSlide}
+        className="absolute -left-16 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-4 rounded-full shadow-lg z-10"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-12 h-12">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </svg>
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute -right-16 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-4 rounded-full shadow-lg z-10"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-12 h-12">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
 
       <div ref={containerRef} className="relative aspect-[16/9] rounded-xl overflow-hidden">
         {/* Before Image (Partial) */}
@@ -113,44 +126,26 @@ function MultiSlideSlider({
 
         {/* Slider Handle */}
         <div
-          className="absolute top-0 bottom-0 w-10 cursor-ew-resize"
+          className="absolute top-0 bottom-0 w-16 cursor-ew-resize"
           style={{
-            left: `calc(${sliderPosition}% - 20px)`,
+            left: `calc(${sliderPosition}% - 32px)`,
           }}
           onMouseDown={handleMouseDown}
           onTouchStart={handleMouseDown}
         >
-          <div className="absolute top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center">
-            <BsArrows className="w-5 h-5" />
+          <div className="absolute top-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center border-2 border-gray-200">
+            <BsArrows className="w-8 h-8" />
           </div>
           <div className="absolute top-0 bottom-0 left-1/2 w-px bg-white"></div>
         </div>
 
         {/* Labels */}
-        <div className="absolute bottom-4 left-4 bg-white px-4 py-2 rounded-full text-lg font-medium">
+        <div className="absolute bottom-4 left-4 bg-black text-white px-6 py-3 rounded-full text-2xl font-medium">
           {beforeLabel}
         </div>
-        <div className="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-full text-lg font-medium">
+        <div className="absolute bottom-4 right-4 bg-black text-white px-6 py-3 rounded-full text-2xl font-medium">
           {afterLabel}
         </div>
-
-        {/* Navigation Buttons */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-          </svg>
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
-        </button>
 
         {/* Slide Indicator */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">

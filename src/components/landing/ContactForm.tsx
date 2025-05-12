@@ -37,41 +37,45 @@ export default function ContactForm() {
               <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="text-lg font-medium">שם מלא</label>
+                    <label htmlFor="name" className="text-lg font-medium">שם מלא <span className="text-red-500">*</span></label>
                     <input
                       type="text"
                       id="name"
                       name="name"
+                      required
                       className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-pink-200 text-right"
                       placeholder="הכנס את שמך המלא"
                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="email" className="text-lg font-medium">אימייל</label>
+                    <label htmlFor="email" className="text-lg font-medium">אימייל <span className="text-red-500">*</span></label>
                     <input
                       type="email"
                       id="email"
                       name="email"
+                      required
                       className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-pink-200 text-right"
                       placeholder="הכנס את כתובת המייל שלך"
                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="phone" className="text-lg font-medium">טלפון</label>
+                    <label htmlFor="phone" className="text-lg font-medium">טלפון <span className="text-red-500">*</span></label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
+                      required
                       className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-pink-200 text-right"
                       placeholder="הכנס את מספר הטלפון שלך"
                     />
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="message" className="text-lg font-medium">הודעה</label>
+                  <label htmlFor="message" className="text-lg font-medium">הודעה <span className="text-red-500">*</span></label>
                   <textarea
                     id="message"
                     name="message"
+                    required
                     rows={4}
                     className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-pink-200 text-right"
                     placeholder="כתוב את הודעתך כאן..."

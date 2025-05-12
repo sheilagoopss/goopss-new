@@ -16,11 +16,12 @@ const CustomCard = ({
   return (
     <div
       className={`flex flex-col items-center justify-center text-center gap-4 p-10 w-[40ch] rounded-3xl ${className}`}
+      dir="rtl"
     >
       <Image src={image} alt={title} width={200} height={200} />
       <div>
-        <h3 className="text-3xl font-bold">{title}</h3>
-        <p className="text-lg text-gray-500">{description}</p>
+        <h3 className="text-3xl font-bold text-center">{title}</h3>
+        <p className="text-lg text-gray-500 text-center">{description}</p>
       </div>
     </div>
   );

@@ -80,7 +80,7 @@ const slides = [
 
 const Page = () => {
   return (
-    <div className={`w-full flex flex-col ${openSansHebrew.variable} font-sans`}>
+    <div className={`w-full flex flex-col ${openSansHebrew.variable} font-sans`} dir="rtl">
       <div
         style={{
           backgroundImage: "url('/images/landing/herobg.svg')",
@@ -94,14 +94,14 @@ const Page = () => {
         <div className="container mx-auto px-4 md:px-0">
           <div className="flex flex-col items-center justify-center text-center gap-4 md:pt-10 pt-10">
             <div className="flex flex-col gap-4 md:w-3/4 md:px-0 px-8">
-              <h1 className="md:text-5xl text-4xl font-bold">
+              <h1 className="md:text-5xl text-4xl font-bold" dir="rtl">
               הצלחה באיצי, ללא מתח
                 <br />
                 תן לסוכן ה-AI שלך לעשות את העבודה
                 <br />
                 בזמן שאתה מתמקד ביצירה שלך
               </h1>
-              <p className="text-gray-500 text-lg md:mt-0 mt-10">
+              <p className="text-gray-500 text-lg md:mt-0 mt-10" dir="rtl">
               goopss משתף פעולה עם קבוצה נבחרת של משתמשים מוקדמים.
                 <br />
                 הירשם עכשיו כדי להיות בין הראשונים לחוות את זה.
@@ -124,11 +124,12 @@ const Page = () => {
       <div className="md:py-10 container mx-auto px-4 md:px-0 bg-transparent">
         <div className="flex flex-col items-center justify-center text-center gap-10 md:pt-10 pt-2 md:gap-20">
           <div className="md:w-1/2">
-            <h1 className="text-5xl font-bold">
+            <h1 className="text-5xl font-bold" dir="rtl">
               ברוכים הבאים לניהול איצי
-              <br /> ללא מאמץ
+              <br />
+              ללא מאמץ
             </h1>
-            <p className="text-gray-500 text-lg">
+            <p className="text-gray-500 text-lg" dir="rtl">
             goopss מטפל במשימות שגוזלות זמן, ומאפשר לך
             להתמקד ביצירה ומכירה.
             </p>
@@ -169,8 +170,8 @@ const Page = () => {
           </div>
           <div className="flex flex-col gap-2 md:w-1/2">
             <div className="flex flex-col gap-4 md:mb-10">
-              <h1 className="text-4xl font-bold md:text-right text-center">אופטימיזציה של רשימות, בקלות</h1>
-              <p className="text-lg text-gray-500 text-center md:text-right rtl:text-right">
+              <h1 className="text-4xl font-bold md:text-right text-center" dir="rtl">אופטימיזציה של רשימות, בקלות</h1>
+              <p className="text-lg text-gray-500 text-center md:text-right rtl:text-right" dir="rtl">
               ה-AI שלנו משפר את הרשימות שלך להשפעה מקסימלית, מיטבי כותרות, תגיות ותיאורים
               להגברת הנראות. תמונות לפני ואחרי מדגימות את התוצאות.
               </p>
@@ -197,8 +198,8 @@ const Page = () => {
       <div className="container mx-auto px-4 md:px-0 bg-transparent">
         <div className="flex flex-col items-center text-center gap-10 py-20">
           <div>
-            <h1 className="text-5xl font-bold">מתמונות בסיסיות לאיכות סטודיו</h1>
-            <p className="text-lg text-gray-500">
+            <h1 className="text-5xl font-bold" dir="rtl">מתמונות בסיסיות לאיכות סטודיו</h1>
+            <p className="text-lg text-gray-500" dir="rtl">
             הפוך תמונות מוצר פשוטות לתמונות מקצועיות ומעוצבות
               <br />
               שמציגות את המותג שלך במיטבו.
@@ -221,10 +222,10 @@ const Page = () => {
         <div className="flex md:flex-row flex-col-reverse md:gap-20 gap-10 items-center py-20">
           <div className="md:w-1/2 flex flex-col gap-2">
             <div className="flex flex-col gap-4">
-              <h1 className="text-4xl font-bold md:text-right text-center">
+              <h1 className="text-4xl font-bold md:text-right text-center" dir="rtl">
                 הגבר את הנוכחות שלך ברשת
               </h1>
-              <p className="text-lg text-gray-500 md:text-right text-center rtl:text-right">
+              <p className="text-lg text-gray-500 md:text-right text-center rtl:text-right" dir="rtl">
               מערכת מונעת AI שלנו מנהלת את דף הפייסבוק שלך, אינסטגרם,
               קבוצות פייסבוק ופינטרסט על ידי יצירת פוסטים מעניינים
               ופרסום שלהם בזמנים הטובים ביותר.
@@ -270,8 +271,8 @@ const Page = () => {
           </div>
           <div className="flex flex-col gap-2 md:w-1/2">
             <div className="flex flex-col gap-4 md:mb-10">
-              <h1 className="text-4xl font-bold md:text-right text-center">הגדל את הצלחת הפרסום שלך</h1>
-              <p className="text-lg text-gray-500 text-center md:text-right rtl:text-right">
+              <h1 className="text-4xl font-bold md:text-right text-center" dir="rtl">הגדל את הצלחת הפרסום שלך</h1>
+              <p className="text-lg text-gray-500 text-center md:text-right rtl:text-right" dir="rtl">
               ניהול פרסום יכול להיות מכריע, אבל התהליך הופך לקל.
               תוסף הכרום שלנו מנתח את נתוני החנות שלך כדי לזהות את הרשימות הטובות ביותר לקידום.
               קבל המלצות מבוססות נתונים
@@ -310,8 +311,8 @@ const Page = () => {
         className="flex flex-col justify-center mt-10 bg-transparent"
       >
         <div className="flex flex-col items-center justify-center text-center gap-6 pt-32 pb-8">
-          <h1 className="text-5xl font-bold">הצטרף לרשימת ההמתנה!</h1>
-          <p className="text-gray-500 max-w-2xl mx-auto">
+          <h1 className="text-5xl font-bold" dir="rtl">הצטרף לרשימת ההמתנה!</h1>
+          <p className="text-gray-500 max-w-2xl mx-auto" dir="rtl">
             הצטרף לרשימת ההמתנה והיה הראשון לחוות ניהול חנות איצי ללא טרחה!
             ה-AI שלנו מטפל בכל בזמן שאתה מתמקד במה שחשוב.
           </p>
