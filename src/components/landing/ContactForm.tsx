@@ -2,7 +2,7 @@
 
 import { useMailSender } from "@/hooks/useSendMail";
 import { Open_Sans } from "next/font/google";
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 
 const openSansHebrew = Open_Sans({
   subsets: ["hebrew"],
@@ -12,6 +12,7 @@ const openSansHebrew = Open_Sans({
 
 export default function ContactForm() {
   const { sendMail, isSendingMail } = useMailSender();
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -43,6 +44,8 @@ export default function ContactForm() {
     });
     if (response?.data) {
       (e.target as HTMLFormElement).reset();
+      setShowSuccess(true);
+      setTimeout(() => setShowSuccess(false), 5000); // Hide after 5 seconds
     }
   };
 
@@ -62,88 +65,75 @@ export default function ContactForm() {
         </div>
 
         <div className="w-full max-w-[1000px] mx-auto">
-          <div
-            className="relative rounded-3xl p-0 md:p-0 overflow-hidden w-full"
-            style={{ background: "#EBF1FB" }}
-          >
-            {/* Blob SVG */}
-            <svg
-              className="absolute -top-10 -left-10 w-60 h-60 opacity-40"
-              viewBox="0 0 200 200"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill="#B4BDFF"
-                d="M44.8,-67.2C56.6,-59.7,63.7,-44.2,68.2,-29.2C72.7,-14.2,74.6,0.3,70.2,13.2C65.8,26.1,55.1,37.4,43.1,46.7C31.1,56,17.8,63.3,3.2,62.1C-11.4,60.9,-22.8,51.2,-34.2,42.2C-45.6,33.2,-57,24.9,-62.7,13.1C-68.4,1.3,-68.4,-13.9,-62.2,-26.2C-56,-38.5,-43.6,-48,-30.2,-54.7C-16.8,-61.4,-2.4,-65.3,12.2,-69.1C26.8,-72.9,41.6,-76.7,44.8,-67.2Z"
-                transform="translate(100 100)"
-              />
-            </svg>
-            {/* White Content Box */}
-            <div className="relative bg-white rounded-2xl shadow-lg p-14 md:p-20 m-10">
-              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="text-lg font-medium">
-                      שם מלא <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-pink-200 text-right"
-                      placeholder="הכנס את שמך המלא"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="email" className="text-lg font-medium">
-                      אימייל <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-pink-200 text-right"
-                      placeholder="הכנס את כתובת המייל שלך"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="phone" className="text-lg font-medium">
-                      טלפון <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-pink-200 text-right"
-                      placeholder="הכנס את מספר הטלפון שלך"
-                    />
-                  </div>
+          <div className="relative rounded-2xl p-8 md:p-12">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+              {showSuccess && (
+                <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
+                  <strong className="font-bold">תודה, פרטיך התקבלו בהצלחה</strong>
                 </div>
+              )}
+              <div className="grid md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="message" className="text-lg font-medium">
-                    הודעה <span className="text-red-500">*</span>
+                  <label htmlFor="name" className="text-lg font-medium">
+                    שם מלא <span className="text-red-500">*</span>
                   </label>
-                  <textarea
-                    id="message"
-                    name="message"
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
                     required
-                    rows={4}
                     className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-pink-200 text-right"
-                    placeholder="כתוב את הודעתך כאן..."
+                    placeholder="הכנס את שמך המלא"
                   />
                 </div>
-                <button
-                  type="submit"
-                  className="bg-[#B4BDFF] text-white rounded-lg py-3 px-6 text-lg font-medium hover:bg-[#9BA4E6] transition-colors"
-                  disabled={isSendingMail}
-                >
-                  {isSendingMail ? "שומר..." : "שלח הודעה"}
-                </button>
-              </form>
-            </div>
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="email" className="text-lg font-medium">
+                    אימייל <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-pink-200 text-right"
+                    placeholder="הכנס את כתובת המייל שלך"
+                  />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="phone" className="text-lg font-medium">
+                    טלפון <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-pink-200 text-right"
+                    placeholder="הכנס את מספר הטלפון שלך"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-2">
+                <label htmlFor="message" className="text-lg font-medium">
+                  הודעה <span className="text-red-500">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={4}
+                  className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-pink-200 text-right"
+                  placeholder="כתוב את הודעתך כאן..."
+                />
+              </div>
+              <button
+                type="submit"
+                className="bg-[#B4BDFF] text-white rounded-lg py-3 px-6 text-lg font-medium hover:bg-[#9BA4E6] transition-colors"
+                disabled={isSendingMail}
+              >
+                {isSendingMail ? "שומר..." : "שלח הודעה"}
+              </button>
+            </form>
           </div>
         </div>
       </div>
