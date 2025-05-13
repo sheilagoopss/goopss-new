@@ -207,29 +207,62 @@ const Page = () => {
         </div>
       </div>
       <div className="container mx-auto px-4 md:px-0 bg-transparent">
-        <div className="flex flex-col items-center text-center gap-10 py-20">
-          <div>
-            <h1 className="text-5xl font-bold" dir="rtl">
-              מתמונות בסיסיות לאיכות סטודיו
-            </h1>
-            <p className="text-lg text-gray-500" dir="rtl">
-              הפוך תמונות מוצר פשוטות לתמונות מקצועיות ומעוצבות
-              <br />
-              שמציגות את המותג שלך במיטבו.
-            </p>
+        <div className="flex md:flex-row flex-col md:gap-20 gap-10 items-center py-10">
+          <div className="md:w-1/2 flex flex-col gap-2">
+            <div className="flex flex-col gap-4">
+              <h1 className="text-4xl font-bold md:text-right text-center" dir="rtl">
+                מתמונות בסיסיות לאיכות סטודיו
+              </h1>
+              <p className="text-lg text-gray-500 md:text-right text-center rtl:text-right" dir="rtl">
+                הפוך תמונות מוצר פשוטות לתמונות מקצועיות ומעוצבות שמציגות את המותג שלך במיטבו.
+              </p>
+            </div>
+            <ListItem
+              title="שיפור מקצועי"
+              description="ראה כיצד אנו הופכים תמונות מוצר רגילות לתמונות ברמה גבוהה"
+              className="hover:bg-pink-200 border border-pink-200"
+            />
+            <ListItem
+              title="שלמות ויזואלית"
+              description="עריכה מקצועית שנותנת למוצרים שלך מראה מעוצב"
+              className="hover:bg-pink-200 border border-pink-200"
+            />
+            <ListItem
+              title="אופטימיזציה לתמונות"
+              description="תמונות מותאמות למנועי חיפוש ולפלטפורמות שונות"
+              className="hover:bg-pink-200 border border-pink-200"
+            />
           </div>
-          <div className="w-full flex flex-col md:gap-10 gap-5">
-            <div className="w-full">
-              <div className="relative overflow-hidden rounded-3xl">
-                <MultiSlideSlider slides={slides} className="bg-[#FFE0F0]" />
+          <div className="md:w-1/2 relative px-12">
+            <div className="w-full h-[600px]">
+              <div className="relative h-full">
+                {/* Decorative Blobs */}
+                <div className="absolute inset-0 overflow-hidden rounded-3xl" style={{background: 'linear-gradient(135deg, #FFE0F7 0%, #FFD0F0 100%)'}}>
+                  {/* Blob SVG */}
+                  <svg className="absolute -top-10 -left-10 w-60 h-60 opacity-40" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#FFB0EE" d="M44.8,-67.2C56.6,-59.7,63.7,-44.2,68.2,-29.2C72.7,-14.2,74.6,0.3,70.2,13.2C65.8,26.1,55.1,37.4,43.1,46.7C31.1,56,17.8,63.3,3.2,62.1C-11.4,60.9,-22.8,51.2,-34.2,42.2C-45.6,33.2,-57,24.9,-62.7,13.1C-68.4,1.3,-68.4,-13.9,-62.2,-26.2C-56,-38.5,-43.6,-48,-30.2,-54.7C-16.8,-61.4,-2.4,-65.3,12.2,-69.1C26.8,-72.9,41.6,-76.7,44.8,-67.2Z" transform="translate(100 100)" />
+                  </svg>
+                  <svg className="absolute -bottom-16 -right-16 w-96 h-96 opacity-60" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#FFB0EE" d="M44.8,-67.2C56.6,-59.7,63.7,-44.2,68.2,-29.2C72.7,-14.2,74.6,0.3,70.2,13.2C65.8,26.1,55.1,37.4,43.1,46.7C31.1,56,17.8,63.3,3.2,62.1C-11.4,60.9,-22.8,51.2,-34.2,42.2C-45.6,33.2,-57,24.9,-62.7,13.1C-68.4,1.3,-68.4,-13.9,-62.2,-26.2C-56,-38.5,-43.6,-48,-30.2,-54.7C-16.8,-61.4,-2.4,-65.3,12.2,-69.1C26.8,-72.9,41.6,-76.7,44.8,-67.2Z" transform="translate(100 100)" />
+                  </svg>
+                </div>
+                <MultiSlideSlider slides={slides} className="bg-transparent" />
               </div>
             </div>
           </div>
-          <JoinWaitListButton text="הצטרף לרשימת המתנה" />
         </div>
       </div>
       <div className="container mx-auto px-4 md:px-0 bg-transparent">
         <div className="flex md:flex-row flex-col-reverse md:gap-20 gap-10 items-center py-20">
+          <div className="md:w-1/2">
+            <Image
+              src="/images/landing/amplify.svg"
+              alt="Before and After"
+              width={500}
+              height={500}
+              className="w-full"
+            />
+          </div>
           <div className="md:w-1/2 flex flex-col gap-2">
             <div className="flex flex-col gap-4">
               <h1
@@ -263,17 +296,9 @@ const Page = () => {
               className="hover:bg-lime-200 border border-lime-200"
             />
           </div>
-          <div className="md:w-1/2">
-            <Image
-              src="/images/landing/amplify.svg"
-              alt="Before and After"
-              width={500}
-              height={500}
-              className="w-full"
-            />
-          </div>
         </div>
       </div>
+      <MaintenancePackage />
       <div className="container mx-auto px-4 md:px-0 bg-transparent">
         <div className="flex md:flex-row flex-col-reverse md:gap-20 gap-10 items-center py-20">
           <div className="md:w-1/2">
@@ -322,7 +347,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <MaintenancePackage />
+  
       <div
         style={{
           backgroundImage: "url('/images/landing/footer.svg')",
