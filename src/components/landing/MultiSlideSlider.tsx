@@ -80,26 +80,26 @@ function MultiSlideSlider({
   }, [isDragging])
 
   return (
-    <div className={`w-full max-w-6xl mx-auto rounded-3xl p-12 ${className} relative`}>
+    <div className={`w-full max-w-6xl mx-auto rounded-3xl p-12 ${className} relative h-full`}>
       {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
-        className="absolute -left-16 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-4 rounded-full shadow-lg z-10"
+        className="absolute -left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-4 rounded-full shadow-lg z-50"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-12 h-12">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-8 h-8">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
         </svg>
       </button>
       <button
         onClick={nextSlide}
-        className="absolute -right-16 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-4 rounded-full shadow-lg z-10"
+        className="absolute -right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-4 rounded-full shadow-lg z-50"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-12 h-12">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-8 h-8">
           <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
         </svg>
       </button>
 
-      <div ref={containerRef} className="relative aspect-[16/9] rounded-xl overflow-hidden">
+      <div ref={containerRef} className="relative h-full rounded-xl overflow-hidden">
         {/* Before Image (Partial) */}
         <div
           className="absolute inset-y-0 left-0 h-full"
